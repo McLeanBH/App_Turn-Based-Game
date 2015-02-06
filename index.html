@@ -18,26 +18,38 @@
       </ul>
     </div>
 
+
+    <div class="choose-character hidden">
+        <select class="dropdown"></select>
+        <input type="submit" value="I like this one!" id="button">
+    </div>
+
     <div class="login-wrapper-bottom">
-      <form action="">
+
+      <form id="pick-player-character" method="post" class="player-selection">
+
         <div class="donut-player-select">
           <input class="select-character" id="donut-button" value="Donut" type="submit">
+            <select class="character-dropdown">
+              <option value="donut-character-one">Don Pablo Frosty</option>
+              <option value="donut-character-two">Baby 'Sprinkle Face' McGee</option>
+            </select>
         </div>
 
         <div class="cop-player-select">
           <input class="select-character" id="cop-button" value="Cop" type="submit">
+            <select class="character-dropdown">
+              <option value="cop-character-one">Deputy Hunger</option>
+              <option value="cop-character-two">Captain One-Bite-You're Done</option>
+            </select>
         </div>
+
       </form>
+
     </div>
 
   </div>
 
-<!--   <div class="choose-character hidden">
-  <form id="pick-player-character" method="post" class="player-selection">
-    <select class="dropdown"></select>
-    <input type="submit" value="I like this one!" id="button">
-  </form>
-</div> -->
 
   <div class="game-container hidden">
     <div class="game-health">

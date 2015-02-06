@@ -71,6 +71,21 @@ var characters = [{
 
 
 
+$(".character-dropdown").change(function(selectCharacter) {
+  if ($(".character-dropdown option:selected").text() == "Lowest Price") {
+
+    
+
+    results = _.sortBy(results, "price");
+  } else if ($(".dropdown option:selected").text() == "Highest Price") {
+    results = _.sortBy(results, "price").reverse();
+  } else if ($(".dropdown option:selected").text() == "Relevance") {
+    results = rawData.results;
+  }
+  renderListings(results);
+});
+
+
 
 
 })();
