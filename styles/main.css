@@ -22,7 +22,8 @@ body {
 .login-wrapper-top {
   margin: 0 auto;
   background: #f0f0f0;
-  height: 400px; }
+  height: 400px;
+  padding: 20px; }
   .login-wrapper-top ul {
     list-type: none;
     margin: 0;
@@ -41,7 +42,7 @@ body {
 
 .versus {
   display: inline-block;
-  width: 180px;
+  width: 640px;
   text-align: center;
   font-size: 72px;
   font-family: sans-serif;
@@ -60,24 +61,20 @@ body {
   margin: 0 auto;
   background: #555;
   display: block;
-  height: 20px; }
+  padding: 40px; }
 
 button {
   text-align: center;
   border: 1px solid blue; }
 
 .donut-player-select {
-  margin-left: 50px;
-  margin-right: 40px; }
+  float: left; }
   .donut-player-select .select-character {
-    padding-right: 50px;
     width: 200px; }
 
 .cop-player-select {
-  margin-right: 50px;
-  margin-left: 40px; }
+  float: right; }
   .cop-player-select .select-character {
-    padding-left: 50px;
     width: 200px; }
 
 .donut-player img {
@@ -154,7 +151,12 @@ button {
   text-align: center;
   padding-top: 50px; }
 
-.attack-button {
+.shoot-button,
+.baton-button,
+.slur-button,
+.sprinkle-button,
+.icing-button,
+.glazing-button {
   height: 50px;
   width: 150px;
   font-size: 24px;

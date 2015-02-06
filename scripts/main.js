@@ -8,15 +8,18 @@
         $('.container-login-page').addClass('hidden');
         $('.player-left').addClass('donut-player');
         $('.player-right').addClass('cop-player');
+        $('.cop-attack').addClass('hidden');
 
     });
 
     $('#cop-button').on('click', function(){
       event.preventDefault();
-      $('.game-container').removeClass('hidden');
-      $('.container-login-page').addClass('hidden');
-      $('.player-right').addClass('donut-player');
-      $('.player-left').addClass('cop-player');
+        $('.game-container').removeClass('hidden');
+        $('.container-login-page').addClass('hidden');
+        $('.player-right').addClass('donut-player');
+        $('.player-left').addClass('cop-player');
+        $('.donut-attack').addClass('hidden');
+
     });
 
 
