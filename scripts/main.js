@@ -96,6 +96,71 @@ $(".character-dropdown").change(function(selectCharacter) {
 }
 });
 
+currentPlayer = new Character({health: 100});
+var attackAmount = 7;
+
+currentPlayer.health -= attackAmount;
+$('progress').val(currentPlayer.health);
+
+currentPlayer.health -= attackAmount;
+$('progress').val(currentPlayer.health);
+
+
+setTimeout(updateHealth,500);
+
+
+Donut.prototype.donutAtk = function(foe) {
+  if(Math.random() < 0.75 ) {
+    hitAmount = Math.floor(Math.random() * 20 + 1);
+    foe.health = foe.health - hitAmount;
+    foe.damage = hitAmount;
+    console.log("You hit a(n) " + hitAmount + ". " + foe.name + " now has " + foe.health + " hitpoints.");
+  } else {
+    console.log("You missed!");
+    foe.damage =0;
+  }
+};
+
+Cop.prototype.copAtk = function(fum) {
+  if(Math.random() < 0.3 ) {
+    hitAmount = Math.floor(Math.random() * 25 + 15);
+    fum.damage = hitAmount;
+    fum.health = fum.health - hitAmount;
+    console.log("You hit a(n) " + hitAmount + ". " + fum.name + " now has " + fum.health + " hitpoints.");
+  } else {
+    console.log("You missed!");
+    fum.damage = 0;
+  }
+};
+
+
+// cop attack button functionality
+// $('.copAtk1').on('submit', function(){
+//
+//     cop.copAtk1(donut);
+//     if (donut.damage > 0) {
+//       $('.text-area :first-child').text('You hit a(n) ' + donut.damage +'. ' + donut.name +' now has ' + donut.health + ' hit points.');
+//     }
+//     else {
+//       $('.text-area :first-child').text(hero.name + " Missed!");
+//     }
+//
+//     $('.attack1').attr('disabled','disabled');
+//     $('.attack2').attr('disabled','disabled');
+
+
+
+    //setTimeout(atk, 1000);
+
+    setTimeout(atk, 2000);
+});
+
+
+
+
+
+
+
 
 
 
