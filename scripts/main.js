@@ -23,6 +23,19 @@
     });
 
 
+    //ACCORDIAN
+
+    $('.player-accordian').on('click', '.accordian-control', function(e) {
+      event.preventDefault();
+      $(this)
+      .next('.para')
+      .not(':animated')
+      .slideToggle();
+    });
+
+    //END ACCORDIAN
+
+
 
     function activePlayerTurn() {
       console.log("It's someone's turn");
@@ -49,23 +62,23 @@
 var characters = [{
     name: "Don Pablo Frosty",
     health: 100,
-    evil: false,
+    cop: false,
     img: "img/don.jpg"
 }, {
     name: "Baby 'Sprinkle Face' McGee",
     health: 100,
-    evil: false,
+    cop: false,
     img: "img/mcgee.jpg"
 
 }, {
     name: "Deputy Hunger",
     health: 100,
-    evil: true,
+    cop: true,
     img: "img/deputy-hunger.jpg"
 }, {
     name: "Captain One-Bite-You're Done",
     health: 100,
-    evil: true,
+    cop: true,
     img: "img/captain.jpg"
 }];
 
@@ -73,14 +86,14 @@ var characters = [{
 
 $(".character-dropdown").change(function(selectCharacter) {
   if ($(".character-dropdown option:selected").text() == "cop-character-one") {
-    
+
   } else if ($(".character-dropdown option:selected").text() == "cop-character-two") {
 
   } else if ($(".character-dropdown option:selected").text() == "donut-character-one") {
 
   } else if ($(".character-dropdown option:selected").text() == "donut-character-two") {
 
-
+}
 });
 
 

@@ -35,15 +35,7 @@ body {
   }
 }
 
-.donut-player {
-  display:inline-block;
-  float:left;
-  width:200px;
-  height:300px;
-  text-align:center;
-  background-image: url('../img/donut.png');
-  background-position:center center;
-}
+
 
 .versus {
   display:inline-block;
@@ -54,7 +46,18 @@ body {
   text-transform:lowercase;
 }
 
-.cop-player {
+
+/* .select-cop-character {
+  display:block;
+  float:right;
+  width:200px;
+  height:300px;
+  text-align:center;
+  background-image: url('../img/cop2.png');
+  background-position:center center;
+}
+
+.cop-character-1 {
   display:inline-block;
   float:right;
   width:200px;
@@ -62,6 +65,46 @@ body {
   text-align:center;
   background-image: url('../img/cop2.png');
   background-position:center center;
+}
+
+.cop-character-2 {
+  display:inline-block;
+  float:right;
+  width:200px;
+  height:300px;
+  text-align:center;
+  background-image: url('../img/deputy-hunger.jpg');
+  background-position:center center;
+}
+ */
+
+ .para {
+   display: none;
+ }
+
+.cops-list {
+  display:inline-block;
+  width:300px;
+  text-align:center;
+  vertical-align:top;
+}
+
+.donuts-list {
+  display:inline-block;
+  width:300px;
+  text-align:center;
+  vertical-align:top;
+
+}
+
+.character-selection {
+  display:inline-block;
+  list-style:none;
+}
+
+.para ul {
+  display:inline;
+  list-style:none;
 }
 
 
@@ -75,18 +118,7 @@ body {
 input {
 }
 
-#cop-button {
-  background: #5F7FFC;
-  text-align: center;
-  border: 2px solid red;
 
-}
-
-#donut-button {
-  background: #EA556C;
-  text-align: center;
-  border: 2px solid blue;
-}
 
 .donut-player-select {
   float:left;

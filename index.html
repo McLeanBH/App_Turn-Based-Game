@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
   <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
@@ -24,27 +25,39 @@
         <input type="submit" value="I like this one!" id="button">
     </div>
 
+
+
     <div class="login-wrapper-bottom">
 
-      <form id="pick-player-character" method="post" class="player-selection">
+      <form action="">
 
-        <div class="donut-player-select">
-          <input class="select-character" id="donut-button" value="Donut" type="submit">
-            <select class="character-dropdown">
-              <option value="donut-character-one">Don Pablo Frosty</option>
-              <option value="donut-character-two">Baby 'Sprinkle Face' McGee</option>
-            </select>
-        </div>
+        <ul class="player-accordian">
 
-        <div class="cop-player-select">
-          <input class="select-character" id="cop-button" value="Cop" type="submit">
-            <select class="character-dropdown">
-              <option value="cop-character-one">Deputy Hunger</option>
-              <option value="cop-character-two">Captain One-Bite-You're Done</option>
-            </select>
-        </div>
+          <li class="cops-list">
+            <button class="accordian-control"><h1>Cops</h1></button>
+            <div class="para">
+              <ul>
+                <li><input class="character-selection" id="cops-1" value="Cop One" type="submit"></li>
+                <li><input class="character-selection" id="cops-2" value="Cop Two" type="submit"></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="donuts-list">
+            <button class="accordian-control"><h1>Donuts</h1></button>
+            <div class="para">
+              <ul>
+                <li><input class="character-selection" id="donut-1" value="Conut One" type="submit"></li>
+                <li><input class="character-selection" id="donut-2" value="Conut Two" type="submit"></li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+
 
       </form>
+
 
     </div>
 
