@@ -37,8 +37,11 @@ body {
 .donut-player {
   display:inline-block;
   float:left;
-  width:400px;
+  width:200px;
+  height:300px;
   text-align:center;
+  background-image: url('../img/donut.png');
+  background-position:center center;
 }
 
 .versus {
@@ -53,8 +56,11 @@ body {
 .cop-player {
   display:inline-block;
   float:right;
-  width:400px;
+  width:200px;
+  height:300px;
   text-align:center;
+  background-image: url('../img/cop2.png');
+  background-position:center center;
 }
 
 
@@ -124,10 +130,11 @@ button {
 }
 
 .game-health {
-  width:1080px;
+  width:1000px;
+  margin:15px auto;
   display:block;
   height:60px;
-  padding:15px;
+  padding:15px 0 15px 0;
 }
 
 .player1-health {
@@ -139,10 +146,10 @@ button {
 }
 
 .player2-health {
-  display:inline-block;
-  width:400px;
-  height:50px;
-  float:right;
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  float: right;
   background: #555;
 }
 
@@ -153,26 +160,28 @@ button {
 .game-screen {
   width:1000px;
   display:block;
-  height:260px;
-  padding:15px;
-  background:#999;
+  height:360px;
+  padding:50px 15px 15px 15px;
+  background:url('../img/randy.jpg');
+  background-position:center center;
+  background-size:cover;
   margin:0 auto;
 }
 
 .player-left {
   display:inline-block;
-  width:400px;
-  height:50px;
+  width:200px;
+  height:300px;
   float:left;
-  background:#555;
+  vertical-align:bottom;
 }
 
 .player-right {
   display:inline-block;
-  width:400px;
-  height:50px;
+  width:200px;
+  height:300px;
   float:right;
-  background: #555;
+  vertical-align:bottom;
 }
 
 /* GAME CONSOLE */
