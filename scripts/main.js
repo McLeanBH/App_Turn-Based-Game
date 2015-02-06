@@ -72,17 +72,15 @@ var characters = [{
 
 
 $(".character-dropdown").change(function(selectCharacter) {
-  if ($(".character-dropdown option:selected").text() == "Lowest Price") {
-
+  if ($(".character-dropdown option:selected").text() == "cop-character-one") {
     
+  } else if ($(".character-dropdown option:selected").text() == "cop-character-two") {
 
-    results = _.sortBy(results, "price");
-  } else if ($(".dropdown option:selected").text() == "Highest Price") {
-    results = _.sortBy(results, "price").reverse();
-  } else if ($(".dropdown option:selected").text() == "Relevance") {
-    results = rawData.results;
-  }
-  renderListings(results);
+  } else if ($(".character-dropdown option:selected").text() == "donut-character-one") {
+
+  } else if ($(".character-dropdown option:selected").text() == "donut-character-two") {
+
+
 });
 
 
