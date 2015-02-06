@@ -17,20 +17,39 @@ body {
 
 .container-login-page {
   width: 1080px;
-  margin: 0 auto; }
+  margin: 50px auto; }
 
 .login-wrapper-top {
   margin: 0 auto;
-  background: pink; }
+  background: #f0f0f0;
+  height: 400px; }
   .login-wrapper-top ul {
     list-type: none;
-    margin: 0; }
+    margin: 0;
+    padding-left: 0; }
   .login-wrapper-top li {
     display: inline-block; }
 
+.donut-player {
+  display: inline-block;
+  float: left;
+  width: 400px;
+  text-align: center; }
+
+.versus {
+  display: inline-block;
+  width: 180px;
+  text-align: center; }
+
+.cop-player {
+  display: inline-block;
+  float: right;
+  width: 400px;
+  text-align: center; }
+
 .login-wrapper-bottom {
   margin: 0 auto;
-  background: green;
+  background: #555;
   display: block;
   height: 20px; }
 
@@ -52,9 +71,12 @@ button {
     padding-left: 50px;
     width: 200px; }
 
-.login-wrapper-top img {
-  width: 250px;
-  height: 250px;
+.donut-player img {
+  width: 150px;
+  border-radius: 20px; }
+
+.cop-player img {
+  width: 150px;
   border-radius: 20px; }
 
 .donut-player-select,
