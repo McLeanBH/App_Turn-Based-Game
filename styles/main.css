@@ -39,7 +39,10 @@ body {
 .versus {
   display: inline-block;
   width: 180px;
-  text-align: center; }
+  text-align: center;
+  font-size: 72px;
+  font-family: sans-serif;
+  text-transform: lowercase; }
 
 .cop-player {
   display: inline-block;
@@ -92,6 +95,7 @@ button {
 
 .game-health {
   width: 1080px;
+  display: block;
   height: 60px;
   padding: 15px; }
 
@@ -109,12 +113,30 @@ button {
   float: right;
   background: #555; }
 
+/* GAME SCREEN */
 .game-screen {
   width: 1000px;
-  margin: 0 auto;
-  height: 500px;
-  background: #f0f0f0; }
+  display: block;
+  height: 260px;
+  padding: 15px;
+  background: #999;
+  margin: 0 auto; }
 
+.player-left {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  float: left;
+  background: #555; }
+
+.player-right {
+  display: inline-block;
+  width: 400px;
+  height: 50px;
+  float: right;
+  background: #555; }
+
+/* GAME CONSOLE */
 .game-console {
   width: 1000px;
   margin: 0 auto;
