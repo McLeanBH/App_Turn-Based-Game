@@ -72,9 +72,20 @@ body {
   padding:40px;
 }
 
-button {
+input {
+}
+
+#cop-button {
+  background: #5F7FFC;
   text-align: center;
-  border: 1px solid blue;
+  border: 2px solid red;
+
+}
+
+#donut-button {
+  background: #EA556C;
+  text-align: center;
+  border: 2px solid blue;
 }
 
 .donut-player-select {
@@ -113,12 +124,6 @@ button {
   display: inline-block;
   vertical-align: middle;
 }
-
-
-
-
-
-
 
 .game-container {
   width: 1080px;
@@ -192,18 +197,29 @@ button {
   padding-top:50px;
 }
 
-.shoot-button,
-.baton-button,
-.slur-button,
-.sprinkle-button,
-.icing-button,
-.glazing-button {
+#shoot-button,
+#baton-button,
+#slur-button {
   height:50px;
   width:150px;
   font-size:24px;
-  background:blue;
+  background: #5F7FFC;
   color:#fff;
   border:0;
+  border: 2px solid #EA556C;
+}
+
+#sprinkle-button,
+#icing-button,
+#glazing-button {
+  height:50px;
+  width:150px;
+  font-size:24px;
+  background: #EA556C;
+  color:#fff;
+  border:0;
+  border: 2px solid #5F7FFC;
+
 }
 
 .hidden {

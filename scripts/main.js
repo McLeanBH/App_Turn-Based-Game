@@ -42,4 +42,35 @@
 
     }
 
+
+///=========================
+/// GLOBAL VARS
+///=========================
+var characters = [{
+    name: "Don Pablo Frosty",
+    health: 100,
+    evil: false,
+    img: "img/don.jpg"
+}, {
+    name: "Baby 'Sprinkle Face' McGee",
+    health: 100,
+    evil: false,
+    img: "img/mcgee.jpg"
+
+}, {
+    name: "Deputy Hunger",
+    health: 100,
+    evil: true,
+    img: "img/deputy-hunger.jpg"
+}, {
+    name: "Captain One-Bite-You're Done",
+    health: 100,
+    evil: true,
+    img: "img/captain.jpg"
+}];
+
+
+
+
+
 })();
