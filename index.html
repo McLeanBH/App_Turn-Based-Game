@@ -8,24 +8,20 @@
 </head>
 <body>
 
+<div class="header">
+  <div class="header-container">
+    <p>Cops vs Donuts</p>
+    <p>An Iron Yard Game</p>
+  </div>
+</div>
+
 
   <div class="container-login-page">
-
-    <div class="login-wrapper-top">
-      <ul>
-        <li class="donut-player"></li>
-        <li class="versus"><p>Vs.</p></li>
-        <li class="cop-player"></li>
-      </ul>
-    </div>
-
 
     <div class="choose-character hidden">
         <select class="dropdown"></select>
         <input type="submit" value="I like this one!" id="button">
     </div>
-
-
 
     <div class="login-wrapper-bottom">
 
@@ -37,18 +33,38 @@
             <button class="accordian-control"><h1>Cops</h1></button>
             <div class="para">
               <ul>
-                <li><input class="character-selection" id="cops-1" value="Cop One" type="submit"></li>
-                <li><input class="character-selection" id="cops-2" value="Cop Two" type="submit"></li>
+
+                <li class="character-selection">
+                  <div class="cop1-image"></div>
+                  <input id="cops-1" value="Deputy Hunger" type="submit">
+                </li>
+
+                <li class="character-selection">
+                  <div class="cop2-image"></div>
+                  <input id="cops-2" value="Captain One-Bite-Ya-Done" type="submit">
+                </li>
+
               </ul>
             </div>
           </li>
+
+          <li class="versus">Vs</li>
 
           <li class="donuts-list">
             <button class="accordian-control"><h1>Donuts</h1></button>
             <div class="para">
               <ul>
-                <li><input class="character-selection" id="donut-1" value="Conut One" type="submit"></li>
-                <li><input class="character-selection" id="donut-2" value="Conut Two" type="submit"></li>
+
+                <li class="character-selection">
+                  <div class="donut1-image"></div>
+                  <input id="donut-1" value="Don Pablo Frosty" type="submit">
+                </li>
+
+                <li class="character-selection">
+                  <div class="donut2-image"></div>
+                  <input id="donut-2" value="Baby 'Sprinkle Face' McGee" type="submit">
+                </li>
+
               </ul>
             </div>
           </li>

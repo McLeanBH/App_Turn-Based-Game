@@ -2,23 +2,43 @@
   'use strict';
 
 
-    $('#donut-button').on('click', function(){
+    $('#cops-1').on('click', function(){
       event.preventDefault();
         $('.game-container').removeClass('hidden');
         $('.container-login-page').addClass('hidden');
         $('.player-left').addClass('donut-player');
         $('.player-right').addClass('cop-player');
-        $('.cop-attack').addClass('hidden');
+        $('.donut-attack').addClass('hidden');
 
     });
 
-    $('#cop-button').on('click', function(){
+    $('#cops-2').on('click', function(){
       event.preventDefault();
         $('.game-container').removeClass('hidden');
         $('.container-login-page').addClass('hidden');
         $('.player-right').addClass('donut-player');
         $('.player-left').addClass('cop-player');
         $('.donut-attack').addClass('hidden');
+
+    });
+
+    $('#donut-1').on('click', function(){
+      event.preventDefault();
+      $('.game-container').removeClass('hidden');
+      $('.container-login-page').addClass('hidden');
+      $('.player-left').addClass('donut-player');
+      $('.player-right').addClass('cop-player');
+      $('.cop-attack').addClass('hidden');
+
+    });
+
+    $('#donut-2').on('click', function(){
+      event.preventDefault();
+      $('.game-container').removeClass('hidden');
+      $('.container-login-page').addClass('hidden');
+      $('.player-right').addClass('donut-player');
+      $('.player-left').addClass('cop-player');
+      $('.cop-attack').addClass('hidden');
 
     });
 

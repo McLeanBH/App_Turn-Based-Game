@@ -15,6 +15,24 @@ body {
   margin: 0;
   padding: 0; }
 
+.header {
+  width: 100%;
+  height: 75px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #dfdfdf; }
+
+.header-container {
+  width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px; }
+
+.header-container p {
+  font-family: sans-serif;
+  font-size: 24px;
+  margin: 0;
+  padding: 0; }
+
 .container-login-page {
   width: 1080px;
   margin: 50px auto; }
@@ -33,7 +51,6 @@ body {
 
 .versus {
   display: inline-block;
-  width: 640px;
   text-align: center;
   font-size: 72px;
   font-family: sans-serif;
@@ -69,34 +86,100 @@ body {
   background-position:center center;
 }
  */
+.player-accordian {
+  display: inline-block; }
+
+ul.player-accordian {
+  padding-left: 0;
+  margin: 0 auto; }
+
+.accordian-control {
+  margin: 10px auto;
+  text-align: center;
+  width: 100px; }
+
 .para {
-  display: none; }
+  display: none;
+  text-align: center; }
 
 .cops-list {
   display: inline-block;
-  width: 300px;
+  width: 500px;
   text-align: center;
   vertical-align: top; }
 
 .donuts-list {
   display: inline-block;
-  width: 300px;
+  width: 500px;
   text-align: center;
   vertical-align: top; }
 
 .character-selection {
-  display: inline-block;
-  list-style: none; }
+  display: inline-block; }
 
 .para ul {
   display: inline;
-  list-style: none; }
+  list-style: none;
+  text-align: center;
+  padding-left: 0; }
+
+.para li {
+  display: inline-block;
+  text-align: center; }
+
+.cop1-image {
+  margin: 15px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #dfdfdf;
+  background: url("../img/deputy-hunger.jpg");
+  background-position: center center;
+  background-size: contain; }
+
+.cop2-image {
+  margin: 15px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #dfdfdf;
+  background: url("../img/captain.jpg");
+  background-position: center center;
+  background-size: contain; }
+
+.donut1-image {
+  margin: 15px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #dfdfdf;
+  background: url("../img/mcgee.jpg");
+  background-position: center center;
+  background-size: contain; }
+
+.donut2-image {
+  margin: 15px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 1px solid #dfdfdf;
+  background: url("../img/don.jpg");
+  background-position: center center;
+  background-size: contain; }
+
+#cops-1, #cops-2, #donut-1, #donut-2 {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #dfdfdf;
+  outline: 0;
+  background: transparent; }
 
 .login-wrapper-bottom {
   margin: 0 auto;
-  background: #555;
+  background: transparent;
   display: block;
-  padding: 40px; }
+  padding: 30px 0 30px 0;
+  text-align: center; }
 
 .donut-player-select {
   float: left; }
@@ -107,14 +190,6 @@ body {
   float: right; }
   .cop-player-select .select-character {
     width: 200px; }
-
-.donut-player img {
-  width: 150px;
-  border-radius: 20px; }
-
-.cop-player img {
-  width: 150px;
-  border-radius: 20px; }
 
 .donut-player-select,
 .versus,
