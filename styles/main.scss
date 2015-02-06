@@ -15,6 +15,7 @@ body {
 
 .container-login-page {
   width: 1080px;
+  margin:0 auto;
 }
 
 .login-wrapper-top {
@@ -48,7 +49,7 @@ button {
   margin-left:50px;
   margin-right: 40px;
 
-  .select-donut {
+  .select-character {
     padding-right: 50px;
     width: 200px;
   }
@@ -59,7 +60,7 @@ button {
   margin-right: 50px;
   margin-left: 40px;
 
-  .select-cop {
+  .select-character {
     padding-left: 50px;
     width: 200px;
   }
@@ -138,4 +139,8 @@ button {
   background:blue;
   color:#fff;
   border:0;
+}
+
+.hidden {
+  display:none;
 }

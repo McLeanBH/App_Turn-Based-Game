@@ -16,7 +16,8 @@ body {
   padding: 0; }
 
 .container-login-page {
-  width: 1080px; }
+  width: 1080px;
+  margin: 0 auto; }
 
 .login-wrapper-top {
   margin: 0 auto;
@@ -40,14 +41,14 @@ button {
 .donut-player-select {
   margin-left: 50px;
   margin-right: 40px; }
-  .donut-player-select .select-donut {
+  .donut-player-select .select-character {
     padding-right: 50px;
     width: 200px; }
 
 .cop-player-select {
   margin-right: 50px;
   margin-left: 40px; }
-  .cop-player-select .select-cop {
+  .cop-player-select .select-character {
     padding-left: 50px;
     width: 200px; }
 
@@ -107,5 +108,8 @@ button {
   background: blue;
   color: #fff;
   border: 0; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
