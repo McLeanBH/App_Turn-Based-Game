@@ -257,9 +257,9 @@ ul.player-accordian {
   text-align: center;
   padding-top: 50px; }
 
-#shoot-button,
-#baton-button,
-#slur-button {
+#copAttack1,
+#copAttack2,
+#copAttack3 {
   height: 50px;
   width: 150px;
   font-size: 24px;
@@ -268,9 +268,9 @@ ul.player-accordian {
   border: 0;
   border: 2px solid #EA556C; }
 
-#sprinkle-button,
-#icing-button,
-#glazing-button {
+#donutAttack1,
+#donutAttack2,
+#donutAttack3 {
   height: 50px;
   width: 150px;
   font-size: 24px;
