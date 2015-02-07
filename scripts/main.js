@@ -2,182 +2,328 @@
   'use strict';
 
 
-    $('#cops-1').on('click', function(){
-      event.preventDefault();
-        $('.game-container').removeClass('hidden');
-        $('.container-login-page').addClass('hidden');
-        $('.player-left').addClass('donut-player');
-        $('.player-right').addClass('cop-player');
-        $('.donut-attack').addClass('hidden');
+$('#cop-1').on('click', function(){
+  event.preventDefault();
+    $('.player-filler').text($(".username-input").val());
+    $('.game-container').removeClass('hidden');
+    $('.container-login-page').addClass('hidden');
+    $('.player-left').addClass('cop1-image');
+    $('.player-right').addClass('cop-player');
+    $('.donut-attack').addClass('hidden');
 
-    });
+});
 
-    $('#cops-2').on('click', function(){
-      event.preventDefault();
-        $('.game-container').removeClass('hidden');
-        $('.container-login-page').addClass('hidden');
-        $('.player-right').addClass('donut-player');
-        $('.player-left').addClass('cop-player');
-        $('.donut-attack').addClass('hidden');
+$('#cop-2').on('click', function(){
+  event.preventDefault();
+    $('.player-filler').text($(".username-input").val());
+    $('.game-container').removeClass('hidden');
+    $('.container-login-page').addClass('hidden');
+    $('.player-right').addClass('donut-player');
+    $('.player-left').addClass('cop2-image');
+    $('.donut-attack').addClass('hidden');
 
-    });
+});
 
-    $('#donut-1').on('click', function(){
-      event.preventDefault();
-      $('.game-container').removeClass('hidden');
-      $('.container-login-page').addClass('hidden');
-      $('.player-left').addClass('donut-player');
-      $('.player-right').addClass('cop-player');
-      $('.cop-attack').addClass('hidden');
+$('#donut-1').on('click', function(){
+  event.preventDefault();
+  $('.player-filler').text($(".username-input").val());
+  $('.game-container').removeClass('hidden');
+  $('.container-login-page').addClass('hidden');
+  $('.player-left').addClass('donut1-image');
+  // $('.player-right').addClass('donut1-image');
+  $('.cop-attack').addClass('hidden');
 
-    });
+});
 
-    $('#donut-2').on('click', function(){
-      event.preventDefault();
-      $('.game-container').removeClass('hidden');
-      $('.container-login-page').addClass('hidden');
-      $('.player-right').addClass('donut-player');
-      $('.player-left').addClass('cop-player');
-      $('.cop-attack').addClass('hidden');
+$('#donut-2').on('click', function(){
+  event.preventDefault();
+  $('.player-filler').text($(".username-input").val());
+  $('.game-container').removeClass('hidden');
+  $('.container-login-page').addClass('hidden');
+  // $('.player-right').addClass('donut-player');
+  $('.player-left').addClass('donut2-image');
+  $('.cop-attack').addClass('hidden');
 
-    });
+});
 
 
-    //ACCORDIAN
-
-    $('.player-accordian').on('click', '.accordian-control', function(e) {
-      event.preventDefault();
-      $(this)
-      .next('.para')
-      .not(':animated')
-      .slideToggle();
-    });
-
-    //END ACCORDIAN
-
-//
-//
-//     function activePlayerTurn() {
-//       console.log("It's someone's turn");
-//     }
-//
-//     function gamePlay(countDonuts, countCops) {
-//       var charactersCount = countDonuts + countCops;
-//       var activeCharacters;
-//     }
-//
-//     function selectActivePlayer(autos, humans) {
-//       var a = autos;
-//       var h = humans;
-//       // if (h > 0) {
-//       //     startShowingIt(.)
-//       // }
-//
-//     }
-//
-//
-// ///=========================
-// /// GLOBAL VARS
-// ///=========================
-// var characters = [{
-//     name: "Don Pablo Frosty",
-//     health: 100,
-//     cop: false,
-//     img: "img/don.jpg"
-// }, {
-//     name: "Baby 'Sprinkle Face' McGee",
-//     health: 100,
-//     cop: false,
-//     img: "img/mcgee.jpg"
-//
-// }, {
-//     name: "Deputy Hunger",
-//     health: 100,
-//     cop: true,
-//     img: "img/deputy-hunger.jpg"
-// }, {
-//     name: "Captain One-Bite-You're Done",
-//     health: 100,
-//     cop: true,
-//     img: "img/captain.jpg"
-// }];
-//
-//
-//
-// $(".character-dropdown").change(function(selectCharacter) {
-//   if ($(".character-dropdown option:selected").text() == "cop-character-one") {
-//
-//   } else if ($(".character-dropdown option:selected").text() == "cop-character-two") {
-//
-//   } else if ($(".character-dropdown option:selected").text() == "donut-character-one") {
-//
-//   } else if ($(".character-dropdown option:selected").text() == "donut-character-two") {
-//
-// }
-// });
-//
-// currentPlayer = new Character({health: 100});
-// var attackAmount = 7;
-//
-// currentPlayer.health -= attackAmount;
-//  $('progress').val(currentPlayer.health);
-//
-// currentPlayer.health -= attackAmount;
-// $('progress').val(currentPlayer.health);
-//
-//
-// setTimeout(updateHealth,500);
-//
-//
-// Donut.prototype.donutAtk = function(foe) {
-//   if(Math.random() < 0.75 ) {
-//     hitAmount = Math.floor(Math.random() * 20 + 1);
-//     foe.health = foe.health - hitAmount;
-//     foe.damage = hitAmount;
-//     console.log("You hit a(n) " + hitAmount + ". " + foe.name + " now has " + foe.health + " hitpoints.");
-//   } else {
-//     console.log("You missed!");
-//     foe.damage =0;
-//   }
-// };
-//
-// Cop.prototype.copAtk = function(fum) {
-//   if(Math.random() < 0.3 ) {
-//     hitAmount = Math.floor(Math.random() * 25 + 15);
-//     fum.damage = hitAmount;
-//     fum.health = fum.health - hitAmount;
-//     console.log("You hit a(n) " + hitAmount + ". " + fum.name + " now has " + fum.health + " hitpoints.");
-//   } else {
-//     console.log("You missed!");
-//     fum.damage = 0;
-//   }
+// //Store the variable to run the battle
+// var runBattle = function(){
+//   //Randomly generate enemy by calling the variable above
+//   randomNumber;
+//   //Remove the player choices
+//   $('.choices').remove();
+//   //Add the battle menu with attack options
+//   $('.battle-menu').addClass('active');
+//   //Show fighter stats by calling on the function above
+//   fighterStats();
 // };
 //
 //
-// // cop attack button functionality
-// // $('.copAtk1').on('submit', function(){
-// //
-// //     cop.copAtk1(donut);
-// //     if (donut.damage > 0) {
-// //       $('.text-area :first-child').text('You hit a(n) ' + donut.damage +'. ' + donut.name +' now has ' + donut.health + ' hit points.');
-// //     }
-// //     else {
-// //       $('.text-area :first-child').text(hero.name + " Missed!");
-// //     }
-// //
-// //     $('.attack1').attr('disabled','disabled');
-// //     $('.attack2').attr('disabled','disabled');
+// // random number generator
+// var randomNumber = Math.floor(Math.random(10)*10);
+//
+// // selected-cop-character
+// var selectedCop;
+//     if (randomNumber >= 0 && randomNumber < 6 ) {
+//         selectedCop = copOne;
+//         names = "Deputy Hunger";
+//      }
+//      else if (randomNumber >= 6 ) {
+//         selectedCop = copTwo;
+//         names = "Captain 'One-Bite-Ya-Done' Jack";
+//     }
 //
 //
+// // selected-donut-character
+// var selectedDonut;
+//     if (randomNumber >= 0 && randomNumber < 6 ) {
+//         selectedDonut = donutOne;
+//         names = "Don Pablo Frosty";
+//     }
+//     else if (randomNumber >= 6 ) {
+//         selectedDonut = donutTwo;
+//         names = "Baby 'Sprinkle-Face' McGee";
+//     }
+
 //
-//     //setTimeout(atk, 1000);
+// $('#cop-1')on('click', function(){
 //
-//     setTimeout(atk, 2000);
 // });
 //
+// $('#cop-2')on('click', function(){
 //
+// });
 //
+// $('#donut-1')on('click', function(){
 //
+// });
+//
+// $('#donut-2')on('click', function() {
+//   player = new Player1();
+//   runBattle();
+// });
+
+
+
+
+
+///====================
+//ACCORDIAN
+///====================
+
+$('.player-accordian').on('click', '.accordian-control', function(e) {
+  event.preventDefault();
+  $(this)
+  .next('.para')
+  .not(':animated')
+  .slideToggle();
+});
+
+///====================
+// PLAYER STATS
+///====================
+var playerStats = function () {
+  renderPlayerInfo(player);
+  powerBar(player);
+  renderOpponentInfo(opponent);
+  opponentBar(opponent);
+};
+
+
+
+///====================
+// DONUT CONSTRUCTOR**
+///====================
+function Donut (player) {
+  this.health = player.health;
+  this.name = player.name;
+  this.nameofAttack1 = player.nameOfAttack1;
+  this.nameofAttack2 = player.nameOfAttack2;
+  this.nameofAttack3 = player.nameOfAttack3;
+}
+
+
+var donutOne = new Donut ({ health: 100, name: 'Frosty', nameofAttack1: 'Glazing', nameofAttack2: 'Icing', nameofAttack3: 'Sprinking'});
+console.log(donutOne);
+
+var donutTwo = new Donut ({ health: 100, name: 'Sprinkles', nameofAttack1: 'Glazing', nameofAttack2: 'Icing', nameofAttack3: 'Sprinking'});
+console.log(donutTwo);
+
+///====================
+// DONUT ATTACK PROTOTYPES**
+///====================
+Donut.prototype.attack1 = function (copper) {
+  // console.log("Glazing");
+  if(Math.random() < 0.75 ) {
+    hitDamage = Math.floor(Math.random() * 20 + 1 );
+    copper.health = copper.health - hitDamage;
+    copper.damage = hitDamage;
+    console.log("Nice hit! You just damaged " + copper.name + "by " + hitDamage + " !");
+  } else {
+    console.log("Sorry.. You missed!");
+    copper.damage = 0;
+  }
+};
+
+
+Donut.prototype.attack2 = function (copper) {
+  // console.log("Icing");
+  if(Math.random() < 0.75 ) {
+    hitDamage = Math.floor(Math.random() * 20 + 1);
+    copper.health = copper.health - hitDamage;
+    console.log("Nice hit! You just damaged " + copper.name + "by " + hitDamage + " !");
+  } else {
+      console.log("Sorry.. You missed!");
+      copper.damage = 0;
+    }
+};
+
+
+Donut.prototype.attack3 = function (copper) {
+  // console.log("Sprinking");
+  if(Math.random() < 0.75 ) {
+    hitDamage = Math.floor(Math.random() * 20 + 1);
+    copper.health = copper.health - hitDamage;
+    console.log("Nice hit! You just damaged " + copper.name + "by " + hitDamage + " !");
+  } else {
+      console.log("Sorry.. You missed!");
+      copper.damage = 0;
+    }
+};
+
+///====================
+// CLICK EVENTS FOR DONUT ATTACKS**
+///====================
+
+$('#donutAttack1').click(function() {
+  player.attack1(copper);
+  $('.status').html('Glazing!');
+  playerStats();
+  triggerOpponentAttack();
+});
+
+$('#donutAttack2').click(function() {
+  player.attack2(copper);
+  $('.status').html('Icing!');
+  playerStats();
+  triggerOpponentAttack();
+});
+
+$('#donutAttack3').click(function() {
+  player.attack3(copper);
+  $('.status').html('Sprinkling!');
+  playerStats();
+  triggerOpponentAttack();
+});
+
+
+///====================
+// COP CONSTRUCTOR**
+///====================
+function Cop (player) {
+  this.health = player.health;
+  this.name = player.name;
+  this.nameofAttack1 = player.nameOfAttack1;
+  this.nameofAttack2 = player.nameOfAttack2;
+  this.nameofAttack3 = player.nameOfAttack3;
+}
+
+var copOne = new Cop ({ health: 100, name: 'Captain', nameofAttack1: "Shoot-em", nameofAttack2: 'Batoning', nameofAttack3: 'Slurs'});
+console.log(copOne);
+
+var copTwo = new Cop ({ health: 100, name: 'Deputy', nameofAttack1: "Shoot-em", nameofAttack2: 'Batoning', nameofAttack3: 'Slurs'});
+console.log(copTwo);
+
+///====================
+// COP ATTACK PROTOTYPES**
+///====================
+
+Cop.prototype.attack1 = function (don) {
+  // console.log("Shoot-em");
+  if(Math.random() < 0.75 ) {
+    hitDamage = Math.floor(Math.random() * 20 + 1);
+    don.health = don.health - hitDamage;
+    console.log("Nice hit! You just damaged " + don.name + "by " + hitDamage + " !");
+  } else {
+    console.log("Sorry... You missed!");
+    don.damage = 0;
+  }
+};
+
+Cop.prototype.attack2 = function (don) {
+  // console.log("Batoning");
+  if(Math.random() < 0.75 ) {
+    hitDamage = Math.floor(Math.random() * 20 + 1);
+    don.health = don.health - hitDamage;
+    console.log("Nice hit! You just damaged " + don.name + "by " + hitDamage + " !");
+  } else {
+    console.log("Sorry... You missed!");
+    don.damage = 0;
+  }
+};
+
+Cop.prototype.attack3 = function (don) {
+  // console.log("Slurs");
+  if(Math.random() < 0.75 ) {
+    hitDamage = Math.floor(Math.random() * 20 + 1);
+    don.health = don.health - hitDamage;
+    console.log("Nice hit! You just damaged " + don.name + "by " + hitDamage + " !");
+  } else {
+    console.log("Sorry... You missed!");
+    don.damage = 0;
+  }
+};
+
+
+///====================
+// CLICK EVENTS FOR COP ATTACKS**
+///====================
+
+$('#copAttack1').click(function() {
+  player.attack1(don);
+  $('.status').html('Shoot-em!');
+  playerStats();
+  triggerOpponentAttack();
+});
+
+$('#copAttack2').click(function() {
+  player.attack2(don);
+  $('.status').html('Batoning!');
+  playerStats();
+  triggerOpponentAttack();
+});
+
+$('#copAttack3').click(function() {
+  player.attack3(don);
+  $('.status').html('Slurs!');
+  playerStats();
+  triggerOpponentAttack();
+});
+
+///====================
+// EXECUTE OPPONENT ATTACK
+///====================
+
+function triggerOpponentAttack () {
+  setTimeout(function(){
+    var randomNumber = Math.floor(Math.random() * 10 );
+    if (randomNumber > 3 && randomNumber < 7){
+      enemy.attack1(opponent);
+      $('.status').html('');
+    }
+    else if (randomNumber > 7){
+      enemy.attack2(opponent);
+      $('.status').html('');
+    }
+    else {
+      enemy.attack3(opponent);
+      $('.status').html('');
+    }
+
+    playerStats();
+  }, 2500);
+}
 
 
 

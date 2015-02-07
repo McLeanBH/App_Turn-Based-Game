@@ -34,12 +34,18 @@
             <div class="para">
               <ul>
                 <li class="character-selection">
-                  <div class="cop1-image"></div>
-                  <input id="cops-1" value="Deputy Hunger" type="submit">
-                </li>
+                     <div class="cop1-image"></div>
+                     <form action="">
+                       <input class="username-input" type="text" placeholder="Enter your username">
+                       <input type="submit" value="Login" id="cop-1">
+                     </form>
+                   </li>
                 <li class="character-selection">
                   <div class="cop2-image"></div>
-                  <input id="cops-2" value="Captain One-Bite-Ya-Done" type="submit">
+                  <form action="">
+                    <input class="username-input" type="text" placeholder="Enter your username">
+                  <input id="cop-2" value="Login" type="submit">
+                </form>
                 </li>
               </ul>
             </div>
@@ -51,11 +57,17 @@
               <ul>
                 <li class="character-selection">
                   <div class="donut1-image"></div>
-                  <input id="donut-1" value="Don Pablo Frosty" type="submit">
+                  <form action="">
+                    <input class="username-input" type="text" placeholder="Enter your username">
+                    <input type="submit" value="Login" id="donut-1">
+                  </form>
                 </li>
                 <li class="character-selection">
                   <div class="donut2-image"></div>
-                  <input id="donut-2" value="Baby 'Sprinkle Face' McGee" type="submit">
+                  <form action="">
+                    <input class="username-input" type="text" placeholder="Enter your username">
+                    <input type="submit" value="Login" id="donut-2">
+                  </form>
                 </li>
               </ul>
             </div>
@@ -80,23 +92,26 @@
 
     <div class="game-console">
       <p>Active Player:</p>
-      <span class="activePlayer-filler"></span>
+      <span class="player-filler"></span>
 
-      <input class="cop-attack" id="copAttack1" value="Shoot'em" type="submit">
-      <input class="cop-attack" id="copAttack2" value="Batoning" type="submit">
-      <input class="cop-attack" id="copAttack3" value="Slurs" type="submit">
+      <input class="cop-attack attack1" id="copAttack1" value="Shoot'em" type="submit">
+      <input class="cop-attack attack2" id="copAttack2" value="Batoning" type="submit">
+      <input class="cop-attack attack3" id="copAttack3" value="Slurs" type="submit">
 
-      <input class="donut-attack" id="donutAttack1" value="Sprinkling" type="submit">
-      <input class="donut-attack" id="donutAttack2" value="Icing" type="submit">
-      <input class="donut-attack" id="donutAttack3" value="Glazing" type="submit">
+      <input class="donut-attack attack1" id="donutAttack1" value="Sprinkling" type="submit">
+      <input class="donut-attack attack2" id="donutAttack2" value="Icing" type="submit">
+      <input class="donut-attack attack3" id="donutAttack3" value="Glazing" type="submit">
 
     </div>
 
   </div>
 
+<!--   <script type="text/javascript" src="scripts/gameplay.js"></script> -->
+
+
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
-  <script type="text/javascript" src="scripts/gameplay.js"></script>
+  <script type="text/javascript" src="scripts/tester.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
 
 </body>
