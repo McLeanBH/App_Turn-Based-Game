@@ -2,24 +2,24 @@
   'use strict';
 
 
+
 $('#cop-1').on('click', function(){
   event.preventDefault();
     $('.player-filler').text($(".username-input").val());
     $('.game-container').removeClass('hidden');
     $('.container-login-page').addClass('hidden');
     $('.player-left').addClass('cop1-image');
-    $('.player-right').addClass('cop-player');
+    $('.player-right').addClass('donut1-image');
     $('.donut-attack').addClass('hidden');
-
-});
+  });
 
 $('#cop-2').on('click', function(){
   event.preventDefault();
     $('.player-filler').text($(".username-input").val());
     $('.game-container').removeClass('hidden');
     $('.container-login-page').addClass('hidden');
-    $('.player-right').addClass('donut-player');
     $('.player-left').addClass('cop2-image');
+    $('.player-right').addClass('donut2-image');
     $('.donut-attack').addClass('hidden');
 
 });
@@ -30,7 +30,7 @@ $('#donut-1').on('click', function(){
   $('.game-container').removeClass('hidden');
   $('.container-login-page').addClass('hidden');
   $('.player-left').addClass('donut1-image');
-  // $('.player-right').addClass('donut1-image');
+  $('.player-right').addClass('cop2-image');
   $('.cop-attack').addClass('hidden');
 
 });
@@ -40,33 +40,25 @@ $('#donut-2').on('click', function(){
   $('.player-filler').text($(".username-input").val());
   $('.game-container').removeClass('hidden');
   $('.container-login-page').addClass('hidden');
-  // $('.player-right').addClass('donut-player');
   $('.player-left').addClass('donut2-image');
+  $('.player-right').addClass('cop1-image');
   $('.cop-attack').addClass('hidden');
 
 });
 
 
-// //Store the variable to run the battle
-// var runBattle = function(){
-//   //Randomly generate enemy by calling the variable above
-//   randomNumber;
-//   //Remove the player choices
-//   $('.choices').remove();
-//   //Add the battle menu with attack options
-//   $('.battle-menu').addClass('active');
-//   //Show fighter stats by calling on the function above
-//   fighterStats();
-// };
-//
-//
-// // random number generator
+
+// here we need to have our opponent randomly selected. Therefore, if cop1 is selected there needs to be a 50-50 chance that donut1 or donut2 is the opponent
+
+// random number generator
 // var randomNumber = Math.floor(Math.random(10)*10);
 //
+//
+// //
 // // selected-cop-character
 // var selectedCop;
 //     if (randomNumber >= 0 && randomNumber < 6 ) {
-//         selectedCop = copOne;
+//         selectedCop = ('#cop1');
 //         names = "Deputy Hunger";
 //      }
 //      else if (randomNumber >= 6 ) {
@@ -85,8 +77,8 @@ $('#donut-2').on('click', function(){
 //         selectedDonut = donutTwo;
 //         names = "Baby 'Sprinkle-Face' McGee";
 //     }
-
 //
+// //
 // $('#cop-1')on('click', function(){
 //
 // });
