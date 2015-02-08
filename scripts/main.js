@@ -46,7 +46,13 @@ $('#donut-2').on('click', function(){
 
 });
 
-// testing git 
+$('.cop-attack').click(function(){
+  $('.player1-health').animate({width: '-=36'}, 500);
+  //This method keeps increasing the height by 36px
+});
+
+
+// testing git
 
 // here we need to have our opponent randomly selected. Therefore, if cop1 is selected there needs to be a 50-50 chance that donut1 or donut2 is the opponent
 
