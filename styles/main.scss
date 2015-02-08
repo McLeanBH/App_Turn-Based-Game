@@ -196,7 +196,7 @@ ul.player-accordian {
 
 }
 
-#cops-1, #cops-2, #donut-1, #donut-2 {
+#cop-1, #cop-2, #donut-1, #donut-2 {
   width:200px;
   height:50px;
   border:1px solid #dfdfdf;;
@@ -212,7 +212,9 @@ ul.player-accordian {
   text-align:center;
 }
 
-
+.player-filler {
+  display: inline-block;
+}
 
 
 

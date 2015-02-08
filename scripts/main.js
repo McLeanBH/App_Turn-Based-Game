@@ -46,13 +46,19 @@ $('#donut-2').on('click', function(){
 
 });
 
+// now we have player & opponent health bars being reduced with a 1.5 second timeout interval
+// --> net we need to target each individual attack to have a different damage amount.
+// (Ideally) we get our randomizer working, so that that an aribtrary amount of damage is delivered each time an attack button is pushed.
+
 $('.cop-attack').click(function(){
-  $('.player1-health').animate({width: '-=36'}, 500);
-  //This method keeps increasing the height by 36px
+  $('.player1-health').animate({width: '-=66'}, 500);
+    setTimeout(function(){
+  $('.player2-health').animate({width: '-=46'}, 500);
+}, 1500);
 });
 
 
-// testing git
+
 
 // here we need to have our opponent randomly selected. Therefore, if cop1 is selected there needs to be a 50-50 chance that donut1 or donut2 is the opponent
 
