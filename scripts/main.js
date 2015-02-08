@@ -130,16 +130,16 @@ var playerStats = function () {
 function Donut (player) {
   this.health = player.health;
   this.name = player.name;
-  this.nameofAttack1 = player.nameOfAttack1;
-  this.nameofAttack2 = player.nameOfAttack2;
-  this.nameofAttack3 = player.nameOfAttack3;
+  this.attack1 = player.attack1;
+  this.attack2 = player.attack2;
+  this.attack3 = player.attack3;
 }
 
 
-var donutOne = new Donut ({ health: 100, name: 'Frosty', nameofAttack1: 'Glazing', nameofAttack2: 'Icing', nameofAttack3: 'Sprinking'});
+var donutOne = new Donut ({ health: 100, name: 'Frosty', attack1: 'Glazing', attack2: 'Icing', attack3: 'Sprinking'});
 console.log(donutOne);
 
-var donutTwo = new Donut ({ health: 100, name: 'Sprinkles', nameofAttack1: 'Glazing', nameofAttack2: 'Icing', nameofAttack3: 'Sprinking'});
+var donutTwo = new Donut ({ health: 100, name: 'Sprinkles', attack1: 'Glazing', attack2: 'Icing', attack3: 'Sprinking'});
 console.log(donutTwo);
 
 ///====================
@@ -188,22 +188,27 @@ Donut.prototype.attack3 = function (copper) {
 // CLICK EVENTS FOR DONUT ATTACKS**
 ///====================
 
-$('#donutAttack1').click(function() {
-  player.attack1(copper);
+var player;
+var copper;
+var don;
+
+
+$('#donutAttack1').on('click', function() {
+  player.attack1();
   $('.status').html('Glazing!');
   playerStats();
   triggerOpponentAttack();
 });
 
-$('#donutAttack2').click(function() {
-  player.attack2(copper);
+$('#donutAttack2').on('click', function() {
+  player.attack2();
   $('.status').html('Icing!');
   playerStats();
   triggerOpponentAttack();
 });
 
-$('#donutAttack3').click(function() {
-  player.attack3(copper);
+$('#donutAttack3').on('click', function() {
+  player.attack3();
   $('.status').html('Sprinkling!');
   playerStats();
   triggerOpponentAttack();
@@ -216,15 +221,15 @@ $('#donutAttack3').click(function() {
 function Cop (player) {
   this.health = player.health;
   this.name = player.name;
-  this.nameofAttack1 = player.nameOfAttack1;
-  this.nameofAttack2 = player.nameOfAttack2;
-  this.nameofAttack3 = player.nameOfAttack3;
+  this.attack1 = player.attack1;
+  this.attack2 = player.attack2;
+  this.attack3 = player.attack3;
 }
 
-var copOne = new Cop ({ health: 100, name: 'Captain', nameofAttack1: "Shoot-em", nameofAttack2: 'Batoning', nameofAttack3: 'Slurs'});
+var copOne = new Cop ({ health: 100, name: 'Captain', attack1: "Shoot-em", attack2: 'Batoning', attack3: 'Slurs'});
 console.log(copOne);
 
-var copTwo = new Cop ({ health: 100, name: 'Deputy', nameofAttack1: "Shoot-em", nameofAttack2: 'Batoning', nameofAttack3: 'Slurs'});
+var copTwo = new Cop ({ health: 100, name: 'Deputy', attack1: "Shoot-em", attack2: 'Batoning', attack3: 'Slurs'});
 console.log(copTwo);
 
 ///====================
@@ -272,22 +277,22 @@ Cop.prototype.attack3 = function (don) {
 // CLICK EVENTS FOR COP ATTACKS**
 ///====================
 
-$('#copAttack1').click(function() {
-  player.attack1(don);
+$('#copAttack1').on('click', function() {
+  player.attack1();
   $('.status').html('Shoot-em!');
   playerStats();
   triggerOpponentAttack();
 });
 
-$('#copAttack2').click(function() {
-  player.attack2(don);
+$('#copAttack2').on('click', function() {
+  player.attack2();
   $('.status').html('Batoning!');
   playerStats();
   triggerOpponentAttack();
 });
 
-$('#copAttack3').click(function() {
-  player.attack3(don);
+$('#copAttack3').on('click', function() {
+  player.attack3();
   $('.status').html('Slurs!');
   playerStats();
   triggerOpponentAttack();
