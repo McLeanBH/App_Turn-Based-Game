@@ -46,7 +46,7 @@ $('#donut-2').on('click', function(){
 
 });
 
-
+// testing git 
 
 // here we need to have our opponent randomly selected. Therefore, if cop1 is selected there needs to be a 50-50 chance that donut1 or donut2 is the opponent
 
