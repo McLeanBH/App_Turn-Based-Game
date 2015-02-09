@@ -67,6 +67,7 @@ $(function() {
   .data("value","100");
 
   $(".attack-button").click(function() {
+    setTimeout(function(){
     var randomNumber1 = Math.floor((Math.random() * 10) + 1);
     var currValue = $( "#progressbar1" ).data("value");
     currValue = parseInt(currValue) ? parseInt(currValue) : 0;
@@ -76,7 +77,8 @@ $(function() {
       }).data("value",currValue-randomNumber1);
       $("#progressLabel1").html((currValue-randomNumber1)+"%");
     }
-
+  }, 1500);
+  
   });
 });
 
@@ -88,7 +90,7 @@ $("#nuk-button").click(function() {
 
   var currValue = $( "#progressbar1" ).data("value");
 
-  $(".player-left").animate({
+  $(".game-screen").animate({
     opacity: '0',
   });
 
@@ -110,7 +112,6 @@ $(function() {
 
 
   $(".attack-button").click(function() {
-    setTimeout(function(){
       var randomNumber2 = Math.floor((Math.random() * 10) + 1);
       var currValue = $( "#progressbar2" ).data("value");
       currValue = parseInt(currValue) ? parseInt(currValue) : 0;
@@ -120,7 +121,6 @@ $(function() {
         }).data("value",currValue-randomNumber2);
         $("#progressLabel2").html((currValue-randomNumber2)+"%");
       }
-  }, 1500);
 
       $(".player-left").animate({"left": "+=500px"}, "slow");
       $(".player-left").animate({"left": "-=500px"}, "slow");
