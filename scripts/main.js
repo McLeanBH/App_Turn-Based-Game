@@ -50,12 +50,92 @@ $('#donut-2').on('click', function(){
 // --> net we need to target each individual attack to have a different damage amount.
 // (Ideally) we get our randomizer working, so that that an aribtrary amount of damage is delivered each time an attack button is pushed.
 
-$('.cop-attack').click(function(){
-  $('.player1-health').animate({width: '-=66'}, 500);
-    setTimeout(function(){
-  $('.player2-health').animate({width: '-=46'}, 500);
-}, 1500);
+
+// $('#nuk-button').click(function(){
+//   $('.player1-health').animate({width: '-=100'}, 1500);
+// });
+//
+
+
+// Health Test
+
+$(function() {
+
+  $( "#progressbar1" ).progressbar({
+    value: 100
+  })
+  .data("value","100");
+
+  $(".attack-button").click(function() {
+    var randomNumber1 = Math.floor((Math.random() * 10) + 1);
+    var currValue = $( "#progressbar1" ).data("value");
+    currValue = parseInt(currValue) ? parseInt(currValue) : 0;
+    if(currValue > 0) {
+      $( "#progressbar1" ).progressbar({
+        value: currValue-randomNumber1
+      }).data("value",currValue-randomNumber1);
+      $("#progressLabel1").html((currValue-randomNumber1)+"%");
+    }
+
+  });
 });
+
+
+
+
+$("#nuk-button").click(function() {
+
+
+  var currValue = $( "#progressbar1" ).data("value");
+
+  $(".player-left").animate({
+    opacity: '0',
+  });
+
+  $( "#progressbar1" ).progressbar({
+    value: currValue-100
+  }).data("value",currValue-randomNumber1);
+
+});
+
+
+
+
+
+$(function() {
+  $( "#progressbar2" ).progressbar({
+    value: 100
+  })
+  .data("value","100");
+
+
+  $(".attack-button").click(function() {
+    setTimeout(function(){
+      var randomNumber2 = Math.floor((Math.random() * 10) + 1);
+      var currValue = $( "#progressbar2" ).data("value");
+      currValue = parseInt(currValue) ? parseInt(currValue) : 0;
+      if(currValue > 0) {
+        $( "#progressbar2" ).progressbar({
+          value: currValue-randomNumber2
+        }).data("value",currValue-randomNumber2);
+        $("#progressLabel2").html((currValue-randomNumber2)+"%");
+      }
+  }, 1500);
+
+      $(".player-left").animate({"left": "+=500px"}, "slow");
+      $(".player-left").animate({"left": "-=500px"}, "slow");
+    setTimeout(function(){
+      $(".player-right").animate({"right": "+=500px"}, "slow");
+      $(".player-right").animate({"right": "-=500px"}, "slow");
+  }, 1500);
+
+  });
+
+});
+
+
+// Animate Players
+
 
 
 

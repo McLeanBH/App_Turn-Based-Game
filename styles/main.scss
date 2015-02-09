@@ -9,13 +9,14 @@ $visual-grid: false;
 body {
   margin:0;
   padding:0;
+  background:#f0f0f0;
 }
 
 .header {
   width:100%;
   height:75px;
-  background:#f0f0f0;
-  border-bottom: 1px solid #dfdfdf;
+  background:#252525;
+  border-bottom: 1px solid #333;
 }
 
 .header-container {
@@ -29,8 +30,18 @@ body {
   font-family:sans-serif;
   font-size:24px;
   margin:0;
-  padding:0;
+  padding:10px 0 0 0;
+  color:#dfdfdf;
 }
+
+.header-container .header-subtitle {
+  font-family:sans-serif;
+  font-size:12px;
+  margin:5px;
+  padding:0;
+  color:#dfdfdf;
+}
+
 
 .container-login-page {
   width: 1080px;
@@ -56,12 +67,18 @@ body {
 
 
 
-.versus {
+.versus-container {
   display:inline-block;
   text-align:center;
-  font-size:72px;
+  font-size:36px;
+  width:300px;
   font-family:sans-serif;
   text-transform:lowercase;
+}
+
+.versus {
+  display:block;
+  color:#fff;
 }
 
 
@@ -96,6 +113,28 @@ body {
 }
  */
 
+#progressbar {
+  width:400px;
+}
+
+#progressbar1 {
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); /* IE 9 */
+  -moz-transform:rotate(180deg); /* Firefox */
+  -webkit-transform:rotate(180deg); /* Safari and Chrome */
+  -o-transform:rotate(180deg); /* Opera */
+}
+
+.ui-widget-header {
+  border:0px solid #000 !important;
+}
+
+.ui-progressbar .ui-progressbar-value {
+  margin:0 !important;
+  background:red;
+}
+
+
 .player-accordian {
   display:inline-block;
 }
@@ -108,7 +147,14 @@ ul.player-accordian {
 .accordian-control {
   margin:10px auto;
   text-align:center;
-  width:100px;
+  border: 0px solid #dfdfdf;
+  outline:0;
+  background:transparent;
+  color:#dfdfdf;
+  font-size:36px;
+  text-transform:uppercase;
+  letter-spacing:-1px;
+  font-weight:bold;
 }
 
  .para {
@@ -118,14 +164,14 @@ ul.player-accordian {
 
 .cops-list {
   display:inline-block;
-  width:500px;
+  width:375px;
   text-align:center;
   vertical-align:top;
 }
 
 .donuts-list {
   display:inline-block;
-  width:500px;
+  width:375px;
   text-align:center;
   vertical-align:top;
 
@@ -149,11 +195,9 @@ ul.player-accordian {
 
 .cop1-image {
   margin:15px auto;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  border:1px solid #dfdfdf;
-  background:url('../img/deputy-hunger.jpg');
+  width:150px;
+  height:225px;
+  background:url('../img/reno1.jpg');
   background-position:center center;
   background-size:contain;
 
@@ -162,11 +206,9 @@ ul.player-accordian {
 
 .cop2-image {
   margin:15px auto;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  border:1px solid #dfdfdf;
-  background:url('../img/captain.jpg');
+  width:150px;
+  height:225px;
+  background:url('../img/reno_lady.jpg');
   background-position:center center;
   background-size:contain;
 
@@ -174,11 +216,9 @@ ul.player-accordian {
 
 .donut1-image {
   margin:15px auto;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  border:1px solid #dfdfdf;
-  background:url('../img/mcgee.jpg');
+  width:150px;
+  height:225px;;
+  background:url('../img/jasondonut.jpg');
   background-position:center center;
   background-size:contain;
 
@@ -186,34 +226,64 @@ ul.player-accordian {
 
 .donut2-image {
   margin:15px auto;
-  width:100px;
-  height:100px;
-  border-radius:50px;
-  border:1px solid #dfdfdf;
-  background:url('../img/don.jpg');
+  width:150px;
+  height:225px;;
+  background:url('../img/freddy copy.jpg');
   background-position:center center;
-  background-size:contain;
+  background-size:cover;
 
 }
 
 #cop-1, #cop-2, #donut-1, #donut-2 {
-  width:200px;
-  height:50px;
-  border:1px solid #dfdfdf;;
-  outline:0;
-  background:transparent;
+
+  color:#fff;
 }
+
+.username {
+  text-align:center;
+  display:block;
+}
+
+.username-input {
+  height:30px;
+  width:300px;
+  outline:0;
+  border-radius:4px;
+  border:1px solid #555;
+  text-align:center;
+  background:#333;
+  color:#dfdfdf;
+}
+
+
 
 .login-wrapper-bottom {
   margin: 0 auto;
-  background: transparent;
+  background: #000;
   display: block;;
   padding:30px 0 30px 0;
   text-align:center;
 }
 
+.active-gamer {
+  height:45px;
+  padding-left:45px;
+}
+
 .player-filler {
   display: inline-block;
+  color:#fff;
+  font-family:sans-serif;
+  text-transform:uppercase;
+  font-weight:bold;
+}
+
+.filler-active {
+  display:inline-block;
+  color:#fff;
+  font-family:sans-serif;
+  text-transform:uppercase;
+
 }
 
 
@@ -240,7 +310,7 @@ ul.player-accordian {
 
 
 .donut-player-select,
-.versus,
+.versus-container,
 .cop-player-select {
   display: inline-block;
   vertical-align: middle;
@@ -249,7 +319,10 @@ ul.player-accordian {
 .game-container {
   width: 1080px;
   margin: 50px auto;
-  border:1px solid #000;
+  border:1px solid #333;
+  border-radius:5px;
+  background:#252525;
+  padding-bottom:50px;
 }
 
 .game-health {
@@ -265,7 +338,7 @@ ul.player-accordian {
   width:400px;
   height:50px;
   float:left;
-  background:#555;
+  background:transparent;
 }
 
 .player2-health {
@@ -273,7 +346,7 @@ ul.player-accordian {
   width: 400px;
   height: 50px;
   float: right;
-  background: #555;
+  background: transparent;
 }
 
 
@@ -285,27 +358,37 @@ ul.player-accordian {
   width:1000px;
   display:block;
   height:360px;
-  padding:50px 15px 15px 15px;
-  background:url('../img/randy.jpg');
+  padding:50px 15px 20px 15px;
+  border:1px solid #333;
+  background:#000;
   background-position:center center;
   background-size:cover;
   margin:0 auto;
 }
 
 .player-left {
+  position: relative;
   display:inline-block;
   width:200px;
   height:300px;
-  float:left;
+  left:0;
   vertical-align:bottom;
+  border:0px solid #000;
+  margin-top:-20px;
 }
 
 .player-right {
+  position: relative;
   display:inline-block;
   width:200px;
   height:300px;
   float:right;
-  vertical-align:bottom;
+  right:0;
+  vertical-align:top;
+  border:0px solid #000;
+  margin-top:-20px;
+
+
 }
 
 /* GAME CONSOLE */
@@ -313,11 +396,45 @@ ul.player-accordian {
 .game-console {
   width: 1000px;
   margin: 0 auto;
-  height:200px;
-  background:#dfdfdf;
+  height:150px;
+  background:#000;
   text-align:center;
-  padding-top:50px;
+  border:1px solid #333;
 }
+
+.attack-button {
+  display:inline-block;
+  margin:0 auto;
+  background:url('../img/gold-button.png');
+  background-size:contain;
+  width:100px;
+  height:100px;
+  float: left;
+  margin-left: 30px;
+  padding-top: 0px;
+  margin-top: 22px;
+}
+
+.attack-button p {
+  color: #FFF;
+  text-shadow: 1px 1px 3px #000;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-top: 35px;
+}
+
+#nuk-button {
+  background:url('../img/nuk1.jpg');
+  width:150px;
+  height:150px;
+  background-size:contain;
+  float:left;
+
+}
+
+
 
 #copAttack1,
 #copAttack2,

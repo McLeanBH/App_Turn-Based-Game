@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="styles/main.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+
 </head>
 <body>
 
 <div class="header">
   <div class="header-container">
     <p>Cops vs Donuts</p>
-    <p>An Iron Yard Game</p>
+    <p class="header-subtitle">An Iron Yard Game</p>
   </div>
 </div>
 
@@ -24,53 +26,53 @@
 
     <div class="login-wrapper-bottom">
 
+
+
+
+
+
       <form action="">
 
         <ul class="player-accordian">
 
-          <li class="cops-list">
-            <button class="accordian-control"><h1>Cops</h1></button>
+          <div class="cops-list">
+            <button class="accordian-control"><p>Cops</p></button>
             <div class="para">
               <ul>
                 <li class="character-selection">
-                     <div class="cop1-image"></div>
-                     <form action="">
-                       <input class="username-input" type="text" placeholder="Enter your username">
-                       <input type="submit" value="Login" id="cop-1">
-                     </form>
+                     <div class="cop1-image" id="cop-1"></div>
+<!--                      <form action="">
+  <input type="submit" value="Login" id="cop-1">
+</form> -->
                    </li>
                 <li class="character-selection">
-                  <div class="cop2-image"></div>
-                  <form action="">
-                    <input class="username-input" type="text" placeholder="Enter your username">
-                  <input id="cop-2" value="Login" type="submit">
-                </form>
+                  <div class="cop2-image" id="cop-2"></div>
+
                 </li>
               </ul>
             </div>
-          </li>
-          <li class="versus">Vs</li>
-          <li class="donuts-list">
-            <button class="accordian-control"><h1>Donuts</h1></button>
+          </div>
+            <div class="versus-container">
+              <div class="versus">Vs</div>
+              <div class="username">
+                <input class="username-input" type="text" placeholder="Enter your username">
+              </div>
+            </div>
+          <div class="donuts-list">
+            <button class="accordian-control"><p>Donuts</p></button>
             <div class="para">
               <ul>
                 <li class="character-selection">
-                  <div class="donut1-image"></div>
-                  <form action="">
-                    <input class="username-input" type="text" placeholder="Enter your username">
-                    <input type="submit" value="Login" id="donut-1">
-                  </form>
+                  <div class="donut1-image" id="donut-1"></div>
+
                 </li>
                 <li class="character-selection">
-                  <div class="donut2-image"></div>
-                  <form action="">
-                    <input class="username-input" type="text" placeholder="Enter your username">
-                    <input type="submit" value="Login" id="donut-2">
-                  </form>
+                  <div class="donut2-image" id="donut-2"></div>
+
                 </li>
               </ul>
             </div>
-          </li>
+          </div>
         </ul>
       </form>
     </div>
@@ -79,27 +81,31 @@
 
   <div class="game-container hidden">
     <div class="game-health">
-      <div class="player1-health"></div>
-      <div class="player2-health"></div>
+      <div class="player1-health">
+        <div id="progressbar1"></div>
+<!--         <p id="progressLabel1">100</p>
+ -->      </div>
+      <div class="player2-health">
+        <div id="progressbar2"></div>
+<!--         <p id="progressLabel2">100</p>
+ -->      </div>
     </div>
 
     <div class="game-screen">
       <div class="player-left"></div>
       <div class="player-right"></div>
+    </div>
 
+    <div class="active-gamer">
+      <p class="filler-active">Active Player: <span class="player-filler"></span></p>
     </div>
 
     <div class="game-console">
-      <p>Active Player: <span class="player-filler"></span></p>
+      <div id="nuk-button"></div>
+      <div class="attack-button"><p>Attack 1</p></div>
+      <div class="attack-button"><p>Attack 2</p></div>
+      <div class="attack-button"><p>Attack 3</p></div>
 
-
-      <input class="cop-attack attack1" id="copAttack1" value="Shoot'em" type="submit">
-      <input class="cop-attack attack2" id="copAttack2" value="Batoning" type="submit">
-      <input class="cop-attack attack3" id="copAttack3" value="Slurs" type="submit">
-
-      <input class="donut-attack attack1" id="donutAttack1" value="Sprinkling" type="submit">
-      <input class="donut-attack attack2" id="donutAttack2" value="Icing" type="submit">
-      <input class="donut-attack attack3" id="donutAttack3" value="Glazing" type="submit">
 
     </div>
 
@@ -111,6 +117,8 @@
 
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+
   <script src="bower_components/underscore/underscore.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
 
